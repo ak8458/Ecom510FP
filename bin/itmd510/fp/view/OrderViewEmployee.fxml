@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DateCell?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itmd510.fp.controller.OrderController">
+	<children>
+		<Label fx:id="sessionLabel" layoutX="14.0" layoutY="25.0" prefHeight="17.0" prefWidth="734.0" />
+		<TableView fx:id="tableView" layoutX="22.0" layoutY="71.0" prefHeight="350.0" prefWidth="688.0">
+			<columns>
+				<TableColumn fx:id="orderID" text="Order ID" />
+				<TableColumn fx:id="custID" text="Customer ID" />
+				<TableColumn fx:id="prodID" text="Product ID" />
+				<TableColumn fx:id="prodName" text="Product Name" />
+				<TableColumn fx:id="orderStatus" text="Order Status" />
+				<TableColumn fx:id="orderDate" text="Order Date" />
+				<TableColumn fx:id="quantity" text="Quantity" />
+				<TableColumn fx:id="price" text="Total Price" />
+			</columns>
+		</TableView>
+		
+
+		
+		 <Button layoutX="721.0" layoutY="107.0" mnemonicParsing="false" onAction="#backActivity" prefHeight="25.0" prefWidth="93.0" text="Back" />
+		<Button layoutX="722.0" layoutY="396.0" mnemonicParsing="false" onAction="#confirmOrder" text="Confirm Order" />
+		<!-- <Button onAction="#backToProductView" layoutX="500" layoutY="30.0"
+			mnemonicParsing="false" text="Back to Shop" /> -->
+			<Label fx:id="errorMessage" layoutX="10.0" layoutY="430.0" textFill="#da1724" />
+      <Label layoutX="261.0" layoutY="33.0" text="Pending  Customer Orders">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="721.0" layoutY="71.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="93.0" text="Log Out" />
+
+	</children>
+</AnchorPane>

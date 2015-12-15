@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DateCell?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="700.0" style="-fx-background-color: #c2d6d6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itmd510.fp.controller.LoginRegistrationController">
+	<children>
+		<!-- <Label layoutX="213.0" layoutY="102.0" text="ID" /> -->
+		<Label layoutX="64.0" layoutY="107.0" text="First Name" />
+		<Label layoutX="73.0" layoutY="160.0" text="Last Name" />
+
+		<Label layoutX="76.0" layoutY="217.0" text="Password" />
+
+		<Label layoutX="79.0" layoutY="269.0" text="Address" />
+		<TextField fx:id="firstName" layoutX="157.0" layoutY="103.0" />
+		<TextField fx:id="lastName" layoutX="157.0" layoutY="156.0" />
+		<PasswordField fx:id="password" layoutX="157.0" layoutY="213.0" />
+
+		<TextField fx:id="address" layoutX="157.0" layoutY="265.0" />
+
+
+		<Button layoutX="127.0" layoutY="328.0" mnemonicParsing="false" onAction="#registerUser" text="Register" />
+		<Label fx:id="regMessage" layoutX="218.0" layoutY="332.0" />
+		
+		<Label layoutX="396.0" layoutY="107.0" text="User ID" />
+		<Label layoutX="390.0" layoutY="160.0" text="Password" />
+		<TextField fx:id="userID" layoutX="483.0" layoutY="103.0" />
+		<PasswordField fx:id="loginPassword" layoutX="483.0" layoutY="156.0" />
+		<Button layoutX="483.0" layoutY="213.0" mnemonicParsing="false" onAction="#loginToApplication" text="Login" />
+      <Label layoutX="246.0" layoutY="21.0" text="Welcome to e-Shop510" textFill="#2c1ddb" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorFirstName" layoutX="157.0" layoutY="131.0" textFill="#da1724" />
+      <Label fx:id="errorLastName" layoutX="157.0" layoutY="184.0" textFill="#da1724" />
+      <Label fx:id="errorUserPassword" layoutX="157.0" layoutY="238.0" textFill="#da1724" />
+      <Label fx:id="errorAddress" layoutX="157.0" layoutY="300.0" textFill="#da1724" />
+      <Label fx:id="userIDError" layoutX="483.0" layoutY="131.0" textFill="#da1724" />
+      <Label fx:id="loginPasswordError" layoutX="483.0" layoutY="184.0" textFill="#da1724" />
+      <Label fx:id="errorLogin" layoutX="482.0" layoutY="247.0" />
+      
+	</children>
+</AnchorPane>

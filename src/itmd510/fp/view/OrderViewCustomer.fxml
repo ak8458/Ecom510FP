@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DateCell?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itmd510.fp.controller.OrderController">
+	<children>
+		<Label fx:id="sessionLabel" layoutX="8.0" layoutY="9.0" prefHeight="17.0" prefWidth="736.0" />
+		<TableView fx:id="tableView" layoutX="21.0" layoutY="51.0" prefHeight="329.0" prefWidth="634.0">
+			<columns>
+				<TableColumn fx:id="orderID" text="Order ID" />
+				<TableColumn fx:id="custID" text="Customer ID" />
+				<TableColumn fx:id="prodID" text="Product ID" />
+				<TableColumn fx:id="prodName" text="Product Name" />
+				<TableColumn fx:id="orderStatus" text="Status" />
+				<TableColumn fx:id="orderDate" text="Order Date" />
+				<TableColumn fx:id="quantity" text="Quantity" />
+				<TableColumn fx:id="price" text="Total Price($)" />
+			</columns>
+		</TableView>
+		
+
+		
+		 <Button layoutX="663.0" layoutY="116.0" mnemonicParsing="false" onAction="#backActivity" prefHeight="25.0" prefWidth="86.0" text="Back" />
+		<Button layoutX="663.0" layoutY="355.0" mnemonicParsing="false" onAction="#cancelOrder" text="Cancel Order" />
+		<!-- <Button onAction="#backToProductView" layoutX="500" layoutY="30.0"
+			mnemonicParsing="false" text="Back to Shop" /> -->
+			<Label fx:id="errorMessage" layoutX="35.0" layoutY="388.0" prefHeight="17.0" prefWidth="705.0" textFill="#da1724" />
+      <Button layoutX="663.0" layoutY="83.0" mnemonicParsing="false" onAction="#backToProductView" prefHeight="25.0" prefWidth="86.0" text="Back to Shop" />
+      <Label layoutX="311.0" layoutY="17.0" text="My Orders">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="663.0" layoutY="51.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="86.0" text="Log Out" />
+
+	</children>
+</AnchorPane>

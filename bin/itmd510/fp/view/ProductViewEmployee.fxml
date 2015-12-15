@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DateCell?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itmd510.fp.controller.ViewProductController">
+	<children>
+	<Label fx:id="sessionLabel" layoutX="20.0" layoutY="9.0" prefHeight="17.0" prefWidth="558.0" />
+		<TableView fx:id="tableView" layoutX="14.0" layoutY="49.0" prefHeight="350.0" prefWidth="506.0">
+			<columns>
+				<TableColumn fx:id="itemIdCol" text="Product ID" />
+				<TableColumn fx:id="itemNameCol" prefWidth="101.0" text="Product Name" />
+				<TableColumn fx:id="itemManfCol" prefWidth="70.0" text="Manufacturer" />
+				<TableColumn fx:id="itemPriceCol" prefWidth="69.0" text="Price" />
+				<TableColumn fx:id="itemFreeCol" prefWidth="108.0" text="Free Shipping" />
+				<TableColumn fx:id="itemStockCol" prefWidth="52.0" text="In Stock" />
+			</columns>
+		</TableView>
+		<Label layoutX="26.0" layoutY="409.0" text="Product Name" />
+		<Label layoutX="24.0" layoutY="439.0" text="Product Manufacturer" />
+
+		<Label layoutX="29.0" layoutY="473.0" text="Product Price" />
+
+		<Label layoutX="23.0" layoutY="504.0" text="Product Free Shipping" />
+
+		<Label layoutX="20.0" layoutY="536.0" text="Number of Items" />
+		
+		<TextField fx:id="productName" layoutX="150.0" layoutY="405.0" />
+		<TextField fx:id="productManufacturer" layoutX="150.0" layoutY="435.0" />
+		<TextField fx:id="productPrice" layoutX="150.0" layoutY="469.0" />
+
+		<TextField fx:id="numberOfItems" layoutX="151.0" layoutY="532.0" />
+		
+		<Button layoutX="132.0" layoutY="566.0" mnemonicParsing="false" onAction="#addProduct" text="add" />
+		<Button layoutX="528.0" layoutY="86.0" mnemonicParsing="false" onAction="#viewOrdersEmployee" prefHeight="25.0" prefWidth="60.0" text="Orders" />
+		<Button layoutX="195.0" layoutY="566.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="25.0" prefWidth="60.0" text="update" />
+		<Label fx:id="errorMessage" layoutX="16.0" layoutY="599.0" prefHeight="17.0" prefWidth="592.0" textFill="#da1724" />
+      <Label layoutX="241.0" layoutY="17.0" text="Products">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="prodNameError" layoutX="308.0" layoutY="409.0" textFill="#da1724" />
+      <Label fx:id="prodMnfError" layoutX="308.0" layoutY="439.0" textFill="#da1724" />
+      <Label fx:id="prodPriceError" layoutX="308.0" layoutY="473.0" textFill="#da1724" />
+      <Label fx:id="errorNoitems" layoutX="308.0" layoutY="536.0" textFill="#da1724" />
+      <RadioButton fx:id="freeShipYes" layoutX="150.0" layoutY="504.0" mnemonicParsing="false" selected="true" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="freeShip" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="freeShipNo" layoutX="195.0" layoutY="504.0" mnemonicParsing="false" text="No" toggleGroup="$freeShip" />
+      <Button layoutX="528.0" layoutY="49.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="60.0" text="Log Out" />
+
+
+	</children>
+</AnchorPane>
